@@ -1,11 +1,11 @@
 import gradio as gr
 gr.close_all()
 
-def getDetails(name, age, preference, hobbies):
+def Details(name, age, preference, hobbies):
   return f"Name:{name}\nAge:{age}\nSubject Preference: {preference}\n Hobbies:{[h for h in hobbies]}"
 
 demo = gr.Interface(
-    fn=getDetails,
+    fn=Details,
     inputs = [gr.Textbox(label="Name: "),
         gr.Slider(label="Age: "),
         gr.Radio(label="Subject Preference: ", choices=['C','C#','Java','Python']),
